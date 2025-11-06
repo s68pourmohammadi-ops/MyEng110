@@ -1,14 +1,89 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="fa">
-<head><meta charset="utf-8"><title>مهندس انگلیسی‌زبان</title>
-<style>body{font-family:Tahoma;background:#0d8bf0;color:white;text-align:center;padding:50px}</style>
+بله، هنوز زرین‌پال قبول نمی‌کنه، حتی با این که سایتت الان زنده و باز می‌شه.
+چرا رد می‌شه؟ (حتی با سایت فعال)
+زرین‌پال فقط به "زنده بودن سایت" اکتفا نمی‌کنه، باید یه صفحه فروش حرفه‌ای و کامل داشته باشی. الان سایتت فقط یه صفحه آبی با چند خط متن هست، و هیچ دکمه پرداخت، فرم، یا جزئیات فروش نداره. اینا رو چک می‌کنن:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+مورد لازموضعیت فعلی توصفحه فرود (Landing Page)فقط متن ساده، بدون طراحیدکمه خرید/پرداخت❌ ندارهتوضیح کامل محصولفقط ۵ خط، ناکافیقیمت و نحوه پرداختفقط نوشته، بدون لینکشروع رایگان (مثلاً فرم ثبت‌نام)❌ ندارهطراحی حرفه‌ای و responsiveفقط آبی یکدست، بدون استایل
+
+چیکار کن تا حتماً قبول بشه؟
+۱. یه صفحه فروش کامل بساز (در index.html)
+این کد رو جایگزین محتوای فعلی index.html کن:
+html<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پکیج مکالمه شغلی در ۳۰ روز | MyEng110</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Vazirmatn', Tahoma; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 40px; line-height: 1.8; }
+        .container { max-width: 600px; margin: auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); }
+        h1 { font-size: 2.2em; margin-bottom: 20px; }
+        .price { font-size: 1.8em; color: #00ff88; font-weight: bold; }
+        .btn { display: inline-block; margin: 20px; padding: 15px 30px; background: #ffcc00; color: #1e3c72; font-weight: bold; text-decoration: none; border-radius: 50px; font-size: 1.2em; }
+        .btn:hover { background: #ffdd33; }
+        .free { color: #ffcc00; font-size: 1.3em; }
+        ul { text-align: right; direction: rtl; }
+    </style>
 </head>
 <body>
-<h1>پکیج مکالمه شغلی در ۳۰ روز</h1>
-<p>ربات: <b>@MyEng110Bot</b></p>
-<p>کانال: <b>t.me/MyEng110Channel</b></p>
-<p>فعالیت: آموزش مکالمه مهندسی بدون معلم</p>
-<p>پشتیبانی: ۰۹۳۹xxx xxx (شماره خودت)</p>
-<p>قیمت: ۲۹۰ هزار تومان</p>
-<br><a href="https://t.me/MyEng110Bot" style="color:yellow;font-size:25px">شروع رایگان</a>
-</body></html>
+    <div class="container">
+        <h1>پکیج مکالمه شغلی در ۳۰ روز</h1>
+        <p>آموزش مکالمه مهندسی بدون معلم – فقط با تمرین روزانه</p>
+
+        <p><strong>ربات:</strong> <a href="https://t.me/MyEng110Bot" style="color:#00ff88">@MyEng110Bot</a></p>
+        <p><strong>کانال:</strong> <a href="https://t.me/MyEng110Channel" style="color:#00ff88">t.me/MyEng110Channel</a></p>
+
+        <div class="price">فقط ۲۹۰,۰۰۰ تومان</div>
+
+        <a href="#" class="btn" id="pay-btn">خرید پکیج کامل</a>
+
+        <p class="free">شروع رایگان: ۳ روز اول کاملاً رایگان!</p>
+        <p>فقط کافیه توی ربات استارت بزنید 👇</p>
+        <a href="https://t.me/MyEng110Bot" class="btn" style="background:#00ff88; color:#1e3c72;">شروع رایگان در ربات</a>
+
+        <hr style="margin:30px 0; border-color:#555;">
+        <p><strong>پشتیبانی:</strong> ۰۹۳۹xxx xxx (تلگرام یا تماس)</p>
+    </div>
+
+    <script>
+        // بعداً لینک زرین‌پال رو اینجا جایگزین کن
+        document.getElementById('pay-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('لینک پرداخت به زودی فعال می‌شود!');
+            // window.location.href = 'https://zarinp.al/xxxx';
+        });
+    </script>
+</body>
+</html>
